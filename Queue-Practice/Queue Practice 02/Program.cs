@@ -1,5 +1,9 @@
-﻿//-----------Programa Principal----------------
+﻿using Queue_Practice_02;
+using System.Drawing;
+//-----------Programa Principal----------------
 
+//---------------------------------------------
+// Trabajando con Strings 
 Queue<string> clientes = new Queue<string>();
 
 clientes.Enqueue("Mauricio");
@@ -27,4 +31,24 @@ foreach (string item in clientes)
     Console.WriteLine(item);
 }
 
+
+//---------------------------------------------
+// Trabajando con Objetos
+Queue<Auto> autosCola = new Queue<Auto>();
+
+
+Auto auto01 = new Auto(2005, 123456, Color.Magenta, 20);
+Auto auto02 = new Auto(2005, 123456, Color.Magenta, 20);
+Auto auto03 = new Auto(2005, 123456, Color.Magenta, 20);
+
+autosCola.Enqueue(auto01);
+autosCola.Enqueue(auto02);
+autosCola.Enqueue(auto03);
+
+foreach(Auto item in autosCola)
+{
+    Console.WriteLine(item.GetCarInfo());
+}
+
+Console.WriteLine(autosCola.Peek().GetCarInfo());
 
