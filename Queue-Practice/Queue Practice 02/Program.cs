@@ -52,3 +52,27 @@ foreach(Auto item in autosCola)
 
 Console.WriteLine(autosCola.Peek().GetCarInfo());
 
+//---------------------------------------------
+// Another Example
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine(  );
+Console.WriteLine("--------------");
+Queue<int> queue = new Queue<int>();
+
+queue.Enqueue(1);
+// Printing the element at the front of the queue
+Console.WriteLine("The value at the front of the queue is: {0}", queue.Peek());
+queue.Enqueue(2);
+Console.WriteLine("Top Value in the queue is : {0}", queue.Peek());
+queue.Enqueue(3);
+Console.WriteLine("Top Value in the queue is : {0}", queue.Peek());
+
+Console.WriteLine();
+while (queue.Count > 0)
+{
+    Console.WriteLine();
+    // Dequeue() will return the element that was removed from the queue
+    Console.WriteLine("The front value {0} was removed from the queue", queue.Dequeue());
+    // Print the queue count
+    Console.WriteLine("Current queue count is: {0}", queue.Count);
+}
